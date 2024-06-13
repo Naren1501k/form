@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Form</title>
+<link rel="stylesheet" type="text/css" href="/form.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>LOGIN HI !!</h2>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <input type="submit" value="Submit">
+  </form>
+  <div id="message"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Here you can add any form validation logic if needed
+
+        // Once the form is validated (if applicable), show the alert
+        alert("Your details have been submitted");
+
+        // Optionally, you can reset the form after submission
+        form.reset();
+    });
+});
+</script>
+
+</body>
+</html>
+
